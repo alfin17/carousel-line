@@ -46,8 +46,7 @@ $app->post('/', function ($request, $response)
 	foreach ($data['events'] as $event)
 	{
 		$userMessage = $event['message']['text'];
-	if($userMessage == "Diskon")
-	if($userMessage == "diskon"){
+	if($userMessage == "Diskon"){
 $carouselTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselTemplateBuilder([
   new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder("TETRA SNEAKERS SHOES - BROWN TAN", "Harga Normal Rp. 469.000 Harga Diskon Rp. 329.000","https://www.mensrepublic.id/assets/images/uploads/product/tetra-brown-tan-1512971652-KtRJ81iImSYv.jpg",[
   new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('Pesan Sekarang',"http://vicious.id/tetra-sneakers-shoes-brown-tan-79042"),
