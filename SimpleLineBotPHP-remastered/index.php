@@ -78,9 +78,6 @@ $carouselTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\Caro
   new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder("ALHENA SNEAKERS SHOES - GREY", "Harga Normal Rp. 195.000 Harga Diskon Rp. 185.000","https://www.mensrepublic.id/assets/images/uploads/product/alhena-grey-1512786676-CGlXbhnVtJVE.jpg",[
   new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('Pesan Sekarang',"http://vicious.id/alhena-sneakers-shoes-grey-78176"),
   ]),
-  new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder("ALHENA SNEAKERS STRIP SHOES - CAMEL", "Harga Normal Rp. 195.000 Harga Diskon Rp. 185.000","https://www.mensrepublic.id/assets/images/uploads/product/alhena-camel-strip-1512972165-nF5LyKF8cHGd.jpg",[
-  new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('Pesan Sekarang',"http://vicious.id/alhena-sneakers-strip-shoes-camel-125029"),
-  ]),
   ]);
 $templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('Diskon Up To 50%',$carouselTemplateBuilder);
 $result = $bot->replyMessage($event['replyToken'], $templateMessage);
