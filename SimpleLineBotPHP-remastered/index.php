@@ -75,8 +75,8 @@ $carouselTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\Caro
   new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder("ALHENA SNEAKERS SHOES - BLACK", "Harga Normal Rp. 195.000 Harga Diskon Rp. 185.000","https://www.mensrepublic.id/assets/images/uploads/product/alhena-black-1512786540-uqv0dBlb0Jeq.jpg",[
   new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('Pesan Sekarang',"http://vicious.id/alhena-sneakers-shoes-black-125006"),
   ]),
-  new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder("ALHENA SNEAKERS SHOES - GREY", "Harga Normal Rp. 195.000 Harga Diskon Rp. 185.000","https://www.mensrepublic.id/assets/images/uploads/product/alhena-grey-1512786676-CGlXbhnVtJVE.jpg",[
-  new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('Pesan Sekarang',"http://vicious.id/alhena-sneakers-shoes-grey-78176"),
+  new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder("WWW.VICIOUS.ID", "DISKON UP TO 50%","https://img.yukbisnis.com/business/2017-03/vicious//albums/profile/300x0/logo.jpg",[
+  new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('Selengkapnya',"http://vicious.id/category/diskon"),
   ]),
   ]);
 $templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('Diskon Up To 50%',$carouselTemplateBuilder);
