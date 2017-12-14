@@ -82,17 +82,6 @@ $carouselTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\Caro
 $templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('Diskon Up To 50%',$carouselTemplateBuilder);
 $result = $bot->replyMessage($event['replyToken'], $templateMessage);
 return $result->getHTTPStatus() . ' ' . $result->getRawBody();
-if($userMessage == "Konfirmasi"){
-$confirmTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilder(
-   "Apakah kamu ingin melakukan konfirmasi pembayaran?",
-   [
-   new \LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder('Ya',"http://vicious.id/shopping/confirmation"),
-   new \LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder('Tidak',"Yuk segera konfirmasi pesanan mu"),
-   ]
-   );
-$templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('Konfirmasi', $confirmTemplateBuilder);
-$result = $bot->replyMessage($event['replyToken'], $templateMessage);
-return $result->getHTTPStatus() . ' ' . $result->getRawBody();
 }
 	}
 	
