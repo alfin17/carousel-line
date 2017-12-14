@@ -84,7 +84,21 @@ $result = $bot->replyMessage($event['replyToken'], $templateMessage);
 return $result->getHTTPStatus() . ' ' . $result->getRawBody();
 }
 	}
-	
+	{
+		$userMessage = $event['message']['text'];
+	if($userMessage == "Konfirmasi"){
+		$confirmTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilder(
+   "apakah gw ganteng?",
+   [
+   new \LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder('Ya',"http://vicious.id/shopping/confirmation"),
+   new \LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder('Tidak','/tidak'),
+   ]
+   );
+$templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('konfirmasi', $confirmTemplateBuilder);
+$result = $bot->replyMessage($event['replyToken'], $templateMessage);
+return $result->getHTTPStatus() . ' ' . $result->getRawBody();
+}
+	}
 
 });
 
