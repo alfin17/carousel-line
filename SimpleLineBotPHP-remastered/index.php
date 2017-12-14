@@ -91,6 +91,7 @@ return $result->getHTTPStatus() . ' ' . $result->getRawBody();
    "Ingin melakukan konfirmasi pembayaran?",
    [
    new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('Ya',"http://vicious.id/shopping/confirmation"),
+   new \LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder('Tidak','tidak'),
    ]
    );
 $templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('konfirmasi', $confirmTemplateBuilder);
