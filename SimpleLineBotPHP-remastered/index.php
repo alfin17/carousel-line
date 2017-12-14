@@ -88,10 +88,9 @@ return $result->getHTTPStatus() . ' ' . $result->getRawBody();
 		$userMessage = $event['message']['text'];
 	if($userMessage == "Konfirmasi"){
 		$confirmTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilder(
-   "apakah gw ganteng?",
+   "Ingin melakukan konfirmasi pembayaran?",
    [
-   new \LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder('Ya',"http://vicious.id/shopping/confirmation"),
-   new \LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder('Tidak','/tidak'),
+   new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('Ya',"http://vicious.id/shopping/confirmation"),
    ]
    );
 $templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('konfirmasi', $confirmTemplateBuilder);
