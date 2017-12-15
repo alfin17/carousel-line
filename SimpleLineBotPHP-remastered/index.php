@@ -99,6 +99,14 @@ $result = $bot->replyMessage($event['replyToken'], $templateMessage);
 return $result->getHTTPStatus() . ' ' . $result->getRawBody();
 }
 	}
+	{
+		$userMessage = $event['message']['text'];
+	if(strtolower($userMessage) == "Test"){
+		$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("ini push message");
+		$result = $bot->pushMessage($event['source']['userId'], $textMessageBuilder);
+		return $result->getHTTPStatus() . ' ' . $result->getRawBody();
+}
+	}
 
 });
 
