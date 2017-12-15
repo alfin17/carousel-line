@@ -101,7 +101,7 @@ return $result->getHTTPStatus() . ' ' . $result->getRawBody();
 	}
 	{
 		$userMessage = $event['message']['text'];
-	if(strtolower($userMessage) == "Test"){
+	if($userMessage) == "push"){
 		$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("ini push message");
 		$result = $bot->pushMessage($event['source']['userId'], $textMessageBuilder);
 		return $result->getHTTPStatus() . ' ' . $result->getRawBody();
